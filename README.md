@@ -1,6 +1,6 @@
 # is-connect 
 
-> Check if the internet connection is up
+> Check if the internet connection is up and Check if servers are reachable
 
 Works in Golang
 
@@ -43,12 +43,27 @@ func main() {
 ## API
 
 ### isOnline()
->
+>Check if the internet connection is up
+
 Default TImeout: `5000`
 
 Milliseconds to wait for a server to respond.
 
 Internet Protocol version to use. This is an advanced option that is usually not neccessary to be set, but it can prove useful to specifically assert IPv6 connectivity.
+
+### isReachable(targets)
+>Check if servers are reachable
+
+#### targets
+
+Type: `string`
+
+Default TImeout: `5000`
+
+Milliseconds to wait for a server to respond.
+
+One targets to check.
+
 
 ## How it works
 
@@ -60,4 +75,4 @@ When the first check succeeds, the returned Promise is resolved to `true`.
 
 ## License
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+MIT © [Ali Masyhur](hhttps://github.com/alimasyhur/is-connect/blob/master/LICENSE)
